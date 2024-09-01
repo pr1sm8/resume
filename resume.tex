@@ -1,0 +1,141 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textbf{\textsc{#1}}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Nikith Sai Veluvolu}}\\
+	Hyderabad, India $\cdot$ nikithsai401@gmail.com $\cdot$ +91 7989382625\\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{CVR College Of Engineering}\hfill Hyderabad, Telangana\\
+B.Tech Computer Science and Engineering \textit{GPA: 8.72} \hfill Jul 2019 - May 2023\\
+\vspace{2mm}
+\textbf{VelocIITy Junior College}\hfill Hyderabad, Telangana\\
+Intermediate - 11th and 12th \textit{GPA: 83.5\%} \hfill May 2017 - May 2019\\
+\vspace{2mm}
+\textbf{Narayana Olympiad}\\
+Schooling - 10th \textit{GPA: 8.3} \hfill April 2016 - April 2017\\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+
+\textbf{kis.ai} \hfill Hyderbad\\
+\textit{Junior Full Stack Developer} \hfill May 2023 - September 2024\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Designed and Implemented an automatic Backup, Restore and Backup-Validation service that takes de-duplicated backups from Databases, Content Stores and kis.ai config files.
+	\item Worked end-to-end on internal documentation website where I created a parser that parses annotated source code and content from markdown files to generate documentation files which are shown in the internal website using astro/starlight framework.
+	\item Refactored kis.ai template marketplace service, where kis.ai apps, products, entities, etc. are shared across kis.ai public marketplace or organization level marketplace
+	\item Created a vscode extension for integrating kis.ai chatbot right into vscode and integrated with Language Server Protocol for Code Completions
+	\item Implemented a Language Server for code completions on kis.ai file formats
+\end{itemize}
+\textbf{kis.ai} \hfill Hyderabad\\
+\textit{Go Intern Developer} \hfill Feb 2023 - May 2023\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Created a kis.ai product for saving bookmarks and custom notes in books
+	\item Built API Test case scripts in kis.ai testing framework
+	\item Performance testing of services
+	\item Created kis.ai product for ticket management system
+\end{itemize}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming Languages: & Golang, Java, Python, Javascript                                 \\
+	Databases:             & Postgres, Clickhouse, Apache Age - postgres, Milvus, Meilisearch \\
+	Frameworks:            & Astro                                                            \\
+\end{tabular}
+\vspace{2mm}
+
+\header{Projects}
+{\textbf{Malware Detection using Deep Learning}} {\sl Tensorflow, PIL, Flask} \hfill https://github.com/pr1sm8/malware-detection-deep-learning\\
+Convolutional Neural Network model to detect malware by classifying the image generated from the windows executable file containing the PE header.\\
+\vspace*{2mm}
+{\textbf{Recurrent AutoEncoder for detecting malicious transaction}} {\sl Tensorflow, Solidity} \hfill https://github.com/pr1sm8/secuRe-chAEn\\
+Autoencoder architecture to detect malicious transaction by estimating risk factor based on the recreation loss\\
+\vspace*{2mm}
+
+\header{Awards}
+\textbf{Project Expo Winner} \hfill IEEE CVR\\
+Won first place for creating an NFT skin marketplace across games that uses the common NFT asset pack for skins \hfill Dev 2021\\
+\vspace*{2mm}
+\textbf{Hackathon 3rd place} \hfill Computer Society Of India\\
+Won third place for creating a proof of concept game with NFT skins \hfill October 2021\\
+\vspace*{2mm}
+
+\ 
+\end{document}
