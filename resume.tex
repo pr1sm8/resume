@@ -7,9 +7,15 @@
     \usepackage[T1]{fontenc}
     \usepackage[pdfborder={0 0 0}]{hyperref}
     \textheight=10in
-    \pagestyle{empty}
     \raggedright
     \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+    \usepackage{lastpage}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    % \usepackage{footmisc}
+    % \pagestyle{empty}
+    \renewcommand{\headrulewidth}{0pt}
+    \cfoot{Page \thepage\ of \pageref{LastPage}}
 
     %\renewcommand{\encodingdefault}{cg}
 %\renewcommand{\rmdefault}{lgrcmr}
@@ -132,6 +138,7 @@ Convolutional Neural Network model to detect malware by classifying the image ge
 Autoencoder architecture to detect malicious transaction by estimating risk factor based on the recreation loss\\
 \vspace*{2mm}
 
+\pagebreak
 \header{Certificates}
 \textbf{Complete Beginner Learning Path} \hfill \href{https://tryhackme.com/path/outline/beginner}{Try Hack Me} \\
 Basics of Reconnaissance and Infiltration for testing security of a machine \hfill Jun 2021\\
