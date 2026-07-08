@@ -1,9 +1,4 @@
 \documentclass[a4paper]{article}
-    % \usepackage{fullpage}
-    % \usepackage{amsmath}
-    % \usepackage{amssymb}
-    % \usepackage{textcomp}
-    % \usepackage[utf8]{inputenc}
     \usepackage[T1]{fontenc}
     \usepackage[pdfborder={0 0 0}]{hyperref}
     \textheight=10in
@@ -11,14 +6,13 @@
     \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
     \usepackage{lastpage}
     \usepackage{fancyhdr}
+    \usepackage{lmodern}
+    \usepackage{fontawesome}
     \pagestyle{fancy}
     % \usepackage{footmisc}
     % \pagestyle{empty}
     \renewcommand{\headrulewidth}{0pt}
     \cfoot{Page \thepage\ of \pageref{LastPage}}
-
-    %\renewcommand{\encodingdefault}{cg}
-%\renewcommand{\rmdefault}{lgrcmr}
 
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
@@ -75,25 +69,25 @@
     \begin{document}
 \vspace*{-40pt}
 
-    
+
 
 %==== Profile ====%
 \vspace*{-10pt}
 \begin{center}
 	{\Huge \scshape {Nikith Sai Veluvolu}}\\
-	Hyderabad, India $\cdot$ nikithsai401@gmail.com $\cdot$ +91 7989382625\\
+	\faMapMarker\ Hyderabad, India $\cdot$ \faAt\ nikithsai401@gmail.com $\cdot$ \faMobile\ +91 7989382625\ $\cdot$ \faGithub\ \href{https://github.com/pr1sm8}{pr1sm8} $\cdot$ \faLinkedinSquare\ \href{https://www.linkedin.com/in/nikith-sai-veluvolu/}{Nikith} \
 \end{center}
 
 %==== Education ====%
 \header{Education}
 \textbf{CVR College Of Engineering}\hfill Hyderabad, Telangana\\
-B.Tech Computer Science and Engineering \textit{GPA: 8.67} \hfill Jul 2019 - May 2023\\
+B.Tech Computer Science and Engineering \textit{GPA: 8.67} \hfill Jul 2019 - Jun 2023\\
 \vspace{2mm}
 \textbf{VelocIITy Junior College}\hfill Hyderabad, Telangana\\
 Intermediate - 11th and 12th \textit{GPA: 83.5\%} \hfill May 2017 - May 2019\\
 \vspace{2mm}
-\textbf{Narayana Olympiad}\\
-Schooling - 10th \textit{GPA: 8.3} \hfill April 2016 - April 2017\\
+\textbf{Narayana Olympiad}\hfill Hyderabad, Telangana\\
+Schooling - 10th \textit{GPA: 8.3} \hfill Apr 2016 - Apr 2017\\
 \vspace{2mm}
 
 %==== Experience ====%
@@ -101,55 +95,56 @@ Schooling - 10th \textit{GPA: 8.3} \hfill April 2016 - April 2017\\
 \vspace{1mm}
 
 \textbf{kis.ai} \hfill Hyderbad\\
-\textit{Software Engineer} \hfill May 2023 - Present\\
+\textit{Software Engineer} \hfill May 2023 - May 2026\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 1pt
-    \item Built and deployed a distributed system for running a multi-model ensemble with rules for classification, rules for static forms and tables and slm for natural language information to perform extraction on multi page documents for document risk review system.  
-	\item Refactored Data service from ground up to be able to support various other database like DuckDB and sqlite
-	\item Implemented a Language Server for code completions on kis.ai file formats
-	\item Created a vscode extension for integrating kis.ai chatbot right into vscode and integrated with Language Server Protocol for Code Completions
-	\item Refactored kis.ai template marketplace service, where kis.ai apps, products, entities, etc. are shared across kis.ai public marketplace or organization level marketplace
-	\item Worked end-to-end on internal documentation website where I created a parser that parses annotated source code and content from markdown files to generate documentation files which are shown in the internal website using astro/starlight framework.
-	\item Designed and Implemented an automatic Backup, Restore and Backup-Validation service that takes de-duplicated backups from Databases, Content Stores and kis.ai config files.
+    \item Engineered and maintained a \textbf{distributed}, \textbf{multi-model inference pipeline} using Go, enabling comprehensive extraction from complex, multi-page documents (risk review system). Integrated classification rules engines and \textbf{Natural Language Processing} services to process document semantics, emphasizing low-latency data flow and resilient state management. \textbf{Landing classification to 92\% and extraction to 82\% accuracy}
+    \item Developed and refactored the Data service to decouple binding with postgres and clickhouse and implemented support for multiple transactional and analytical databases (e.g., DuckDB, SQLite, Azure Data Explorer) to ensure system compatibility and abstracting core data access logic resulting in \textbf{reduced complexity to support new database}, and \textbf{reduced query latency by 15\%} and \textbf{increased throughput by 20\%}
+    \item \textbf{Engineered a Custom Language Server} for kis.ai file formats, utilizing the Language Server Protocol (LSP) and delivering real-time code introspection; \textbf{eliminating syntax bugs by 95\%} and \textbf{reduced semantic bugs by 60\%}
+    \item \textbf{Built a VSCode extension} integrating the chatbot via LSP, hosted in the provided web-IDE, resulting in \textbf{increased developer velocity by 67\%}
+	\item Refactored a marketplace service, where kis.ai apps, products, entities, etc. are shared across a multi-tiered kis.ai public marketplace and organization level marketplace, \textbf{simplifying template discovery and increasing feature usage by 40\%}
+	\item Automated internal documentation generation by \textbf{building a custom parser} that extracts annotated source code and description into markdown and displayed in internal docs with backlink to original source code, \textbf{reducing source code navigation time by 70\%}.
+    \item Designed and implemented an automatic \textbf{Backup, Restore, and Validation service}, ensuring system reliability across diverse data sources (Databases, Content Stores). This addressed state management complexity, focusing on idempotent restoration routines and data de-duplication logic.
 \end{itemize}
 \textbf{kis.ai} \hfill Hyderabad\\
 \textit{Go Intern Developer} \hfill Feb 2023 - May 2023\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 1pt
-	\item Created a kis.ai product for saving bookmarks and custom notes in books
-	\item Built API Test case scripts in kis.ai testing framework
-	\item Performance testing of services
-	\item Created kis.ai product for ticket management system
+	\item Built core features for kis.ai products (e.g., bookmarking/notes system, ticket management), focusing on clean API design and robust service boundaries.
+    \item Developed comprehensive API Test case scripts within the kisa.ai testing framework, contributing to service reliability and regression prevention.
+    \item Conducted performance profiling of microservices, identifying algorithmic bottlenecks and optimizing data structures to improve overall throughput and maintain low latency in critical paths. This gave me practical exposure to resource contention management using primitives like atomic counters vs traditional locks.
 \end{itemize}
 
 \header{Skills}
 \begin{tabular}{ l l }
 	Programming Languages: & Golang, Java, Python, Javascript, Rust                           \\
-	Databases:             & Postgres, Clickhouse, Apache Age - postgres, Milvus, Meilisearch \\
-	Frameworks:            & Astro                                                            \\
+	Databases:             & Postgres, Clickhouse, Apache Age, PgVector, Milvus, Meilisearch  \\
+	Frameworks:            & React, Vue.js, Astro                                             \\
+	Platform Engineering   & Observability, Uptime Maintenance                                \\
 \end{tabular}
 \vspace{2mm}
 
+\pagebreak
+
 \header{Open Source Projects}
-{\textbf{microsoft/winget-pkgs}} {\sl YAML, Installtion Scripts} \hfill https://github.com/microsoft/winget-pkgs\\
+{\textbf{microsoft/winget-pkgs}} {\sl YAML, Installtion Scripts} \hfill \href{https://github.com/microsoft/winget-pkgs/pulls?q=is%3Apr+is%3Amerged+author%3Apr1sm8}{Github \faExternalLink}\\
 Contributed to packages to the AUR alternative for the Microsoft community Windows Package Manager manifest repository\\
 \vspace*{2mm}
 
 \header{Projects}
-{\textbf{Malware Detection using Deep Learning}} {\sl Tensorflow, PIL, Flask} \hfill https://github.com/pr1sm8/malware-detection-deep-learning\\
+{\textbf{Malware Detection using Deep Learning}} {\sl Tensorflow, PIL, Flask} \hfill \href{https://github.com/pr1sm8/malware-detection-deep-learning}{Github \faExternalLink}\\
 Convolutional Neural Network model to detect malware by classifying the image generated from the windows executable file containing the PE header.\\
 \vspace*{2mm}
-{\textbf{Recurrent AutoEncoder for detecting malicious transaction}} {\sl Tensorflow, Solidity} \hfill https://github.com/pr1sm8/secuRe-chAEn\\
+{\textbf{Recurrent AutoEncoder for detecting malicious transaction}} {\sl Tensorflow, Solidity} \hfill \href{https://github.com/pr1sm8/secuRe-chAEn}{Github \faExternalLink}\\
 Autoencoder architecture to detect malicious transaction by estimating risk factor based on the recreation loss\\
 \vspace*{2mm}
 
-\pagebreak
 \header{Certificates}
-\textbf{Complete Beginner Learning Path} \hfill \href{https://tryhackme.com/path/outline/beginner}{Try Hack Me} \\
+\textbf{Complete Beginner Learning Path} \hfill \href{https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-OIXBHRS7X7.pdf}{Try Hack Me Credential \faExternalLink} \\
 Basics of Reconnaissance and Infiltration for testing security of a machine \hfill Jun 2021\\
 \vspace*{2mm}
 
-\textbf{Neural Networks and Deep Learning} {\sl Andrew NG} \hfill \href{https://www.coursera.org/learn/neural-networks-deep-learning}{Coursera} \\
+\textbf{Neural Networks and Deep Learning} {\sl Andrew NG} \hfill \href{https://coursera.org/share/b5cc0dc1f8ac26b81d71d36fb3c30f1d}{Coursera Credential \faExternalLink} \\
 Fundamentals of neural networks and created a Neural Network without neural network libraries \hfill Sep 2021\\
 \vspace*{2mm}
 
